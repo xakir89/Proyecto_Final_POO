@@ -45,7 +45,9 @@ class Administrador
         void Setrol(std::string val) { rol = val; }
 
         bool autenticar(const string& user, const string& pass) const;//Metodo de Negocio
-        virtual void mostrarInformacion() const;
+        virtual void mostrarInformacion() const{
+            cout << "[" << rol << "] ID: " << idUsuario<< " | Nombre: " << nombre << " | Usuario: " << username << endl;
+        };
 
     protected:
         string idUsuario;

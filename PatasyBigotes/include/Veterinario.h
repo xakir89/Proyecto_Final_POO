@@ -35,7 +35,9 @@ class Veterinario : public Administrador
     Veterinario(string id, string nom, string user, string pass,
                 string tp, string esp); // Constructor
 
-    void mostrarInformacion() const override; // Sobrescritura del método
+    void mostrarInformacion() const override{
+    cout << "[" << rol << "] ID: " << idUsuario << " | Dr(a): " << nombre << " | T.P.: " << tarjetaProfesional << " | Esp: " << especialidad << endl;
+    }; // Sobrescritura del método
 
     protected:
 

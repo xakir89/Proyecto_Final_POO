@@ -29,7 +29,10 @@ class Auxiliar : public Admistrador
 
     Auxiliar(string id, string nom, string user, string pass); // Constructor: envía "AUXILIAR" como rol por defecto a la clase base
 
-    void mostrarInformacion() const override;    // Sobrescritura del método
+    void mostrarInformacion() const override{
+    cout << "[" << rol << "] ID: " << idUsuario << " | Auxiliar: " << nombre << " | Usuario: " << username << endl;
+    }; // Sobrescritura del método
+
     protected:
 
     private:
