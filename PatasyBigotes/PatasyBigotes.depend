@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1794098247 source:d:\ander\desktop\univalle\ii semestre\orientada a objetos\proyectofinal\proyecto_final_poo\patasybigotes\main.cpp
+	<iostream>
+	"UsuarioDAO.h"
+
+1794098964 d:\ander\desktop\univalle\ii semestre\orientada a objetos\proyectofinal\proyecto_final_poo\patasybigotes\include\usuariodao.h
+	<vector>
+	<string>
+	"Administrador.h"
+	"Veterinario.h"
+	"Auxiliar.h"
+
+1794099419 d:\ander\desktop\univalle\ii semestre\orientada a objetos\proyectofinal\proyecto_final_poo\patasybigotes\include\administrador.h
+	<iostream>
+	<string>
+
+1794099487 d:\ander\desktop\univalle\ii semestre\orientada a objetos\proyectofinal\proyecto_final_poo\patasybigotes\include\veterinario.h
+	<Administrador.h>
+
+1794099555 d:\ander\desktop\univalle\ii semestre\orientada a objetos\proyectofinal\proyecto_final_poo\patasybigotes\include\auxiliar.h
+	<Administrador.h>
+

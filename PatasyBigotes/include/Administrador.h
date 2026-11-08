@@ -20,7 +20,7 @@
 #ifndef ADMINISTRADOR_H
 #define ADMINISTRADOR_H
 
-#include <oistream>
+#include <iostream>
 #include <string>
 
 using namespace std;
@@ -29,22 +29,31 @@ class Administrador
 {
     public:
 
-        Administrador(string id, string nom,string user, string, string pass, string rr = "ADMIN");//constructor
+        Administrador(string id, string nom, string user, string pass, string r = "ADMIN"){
+            idUsuario = id;
+            nombre = nom;
+            username = user;
+            password = pass;
+            rol = r;
+        };//constructor
+
         Administrador() {}
         virtual ~Administrador() {}//destructor
 
-        string GetidUsuario() { return idUsuario; }
+        string GetidUsuario() const { return idUsuario; }
         void SetidUsuario(string val) { idUsuario = val; }
-        string Getnombre() { return nombre; }
+        string Getnombre() const { return nombre; }
         void Setnombre(string val) { nombre = val; }
-        string Getusername() { return username; }
+        string Getusername() const { return username; }
         void Setusername(string val) { username = val; }
-        string Getpassword() { return password; }
+        string Getpassword() const { return password; }
         void Setpassword(string val) { password = val; }
-        std::string Getrol() { return rol; }
+        std::string Getrol() const { return rol; }
         void Setrol(std::string val) { rol = val; }
 
-        bool autenticar(const string& user, const string& pass) const;//Metodo de Negocio
+        bool autenticar(const string& user, const string& pass) const{
+            return username == user && password == pass; //Metodo de Negocio
+        };
         virtual void mostrarInformacion() const{
             cout << "[" << rol << "] ID: " << idUsuario<< " | Nombre: " << nombre << " | Usuario: " << username << endl;
         };

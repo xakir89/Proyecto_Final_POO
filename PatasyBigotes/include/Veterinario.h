@@ -27,13 +27,20 @@ class Veterinario : public Administrador
 {
     public:
 
-        string GettarjetaProfesional() { return tarjetaProfesional; }
+        string GettarjetaProfesional() const { return tarjetaProfesional; }
         void SettarjetaProfesional(string val) { tarjetaProfesional = val; }
-        string Getespecialidad() { return especialidad; }
+        string Getespecialidad() const { return especialidad; }
         void Setespecialidad(string val) { especialidad = val; }
 
-    Veterinario(string id, string nom, string user, string pass,
-                string tp, string esp); // Constructor
+    Veterinario(string id, string nom, string user, string pass, string tp, string esp){
+                idUsuario = id;
+                nombre = nom;
+                username = user;
+                password = pass;
+                rol = "VETERINARIO";
+                tarjetaProfesional = tp;
+                especialidad = esp;
+                }; // Constructor
 
     void mostrarInformacion() const override{
     cout << "[" << rol << "] ID: " << idUsuario << " | Dr(a): " << nombre << " | T.P.: " << tarjetaProfesional << " | Esp: " << especialidad << endl;

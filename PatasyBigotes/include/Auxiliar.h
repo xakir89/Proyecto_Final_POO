@@ -20,14 +20,20 @@
 #ifndef AUXILIAR_H
 #define AUXILIAR_H
 
-#include <Admistrador.h>
+#include <Administrador.h>
 
 
-class Auxiliar : public Admistrador
+class Auxiliar : public Administrador
 {
     public:
 
-    Auxiliar(string id, string nom, string user, string pass); // Constructor: envía "AUXILIAR" como rol por defecto a la clase base
+    Auxiliar(string id, string nom, string user, string pass){
+        idUsuario = id;
+        nombre = nom;
+        username = user;
+        password = pass;
+        rol = "AUXILIAR";
+    };// Constructor: envía "AUXILIAR" como rol por defecto a la clase base
 
     void mostrarInformacion() const override{
     cout << "[" << rol << "] ID: " << idUsuario << " | Auxiliar: " << nombre << " | Usuario: " << username << endl;

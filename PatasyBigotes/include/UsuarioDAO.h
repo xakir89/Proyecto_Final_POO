@@ -56,7 +56,7 @@ public:
 
     bool existeUsuario(const string& user) const { // Verifica si un nombre de usuario ya existe en memoria
         for (const auto& u : listaUsuarios) {
-            if (u.getUsername() == user) {
+            if (u.Getusername() == user) {
                 return true;
             }
         }
